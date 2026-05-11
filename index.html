@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesto</title>
+    <script type="module" crossorigin src="./assets/index-Dc8R9KRz.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D6jmaPro.css">
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1 class="logo">Mesto</h1>
+      </header>
+
+      <main class="content">
+        <section class="profile">
+          <button class="profile__avatar-button" type="button">
+            <img class="profile__avatar" alt="Аватар пользователя" />
+          </button>
+
+          <div class="profile__info">
+            <h2 class="profile__title"></h2>
+            <p class="profile__description"></p>
+          </div>
+
+          <button class="profile__edit-button" type="button">
+            Редактировать
+          </button>
+
+          <button class="profile__add-button" type="button">
+            +
+          </button>
+        </section>
+
+        <section class="cards"></section>
+      </main>
+    </div>
+
+    <div class="popup popup_type_edit-profile">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button">×</button>
+
+        <h2 class="popup__title">Редактировать профиль</h2>
+
+        <form class="popup__form" name="profileForm" novalidate>
+          <input
+            id="profile-name-input"
+            class="popup__input popup__input_type_name"
+            type="text"
+            name="name"
+            placeholder="Имя"
+            minlength="2"
+            maxlength="40"
+            pattern="^[A-Za-zА-Яа-яЁё -]+$"
+            required
+          />
+          <span class="popup__input-error profile-name-input-error"></span>
+
+          <input
+            id="profile-description-input"
+            class="popup__input popup__input_type_description"
+            type="text"
+            name="description"
+            placeholder="Описание"
+            minlength="2"
+            maxlength="200"
+            required
+          />
+          <span class="popup__input-error profile-description-input-error"></span>
+
+          <button
+            class="popup__save-button popup__save-button_disabled"
+            type="submit"
+            disabled
+          >
+            Сохранить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_add-card">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button">×</button>
+
+        <h2 class="popup__title">Новое место</h2>
+
+        <form
+          class="popup__form popup__form_type_add-card"
+          name="addCardForm"
+          novalidate
+        >
+          <input
+            id="card-name-input"
+            class="popup__input popup__input_type_card-name"
+            type="text"
+            name="cardName"
+            placeholder="Название"
+            minlength="2"
+            maxlength="30"
+            pattern="^[A-Za-zА-Яа-яЁё -]+$"
+            required
+          />
+          <span class="popup__input-error card-name-input-error"></span>
+
+          <input
+            id="card-link-input"
+            class="popup__input popup__input_type_card-link"
+            type="url"
+            name="cardLink"
+            placeholder="Ссылка на картинку"
+            required
+          />
+          <span class="popup__input-error card-link-input-error"></span>
+
+          <button
+            class="popup__save-button popup__save-button_disabled"
+            type="submit"
+            disabled
+          >
+            Создать
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_avatar">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button">×</button>
+
+        <h2 class="popup__title">Обновить аватар</h2>
+
+        <form
+          class="popup__form popup__form_type_avatar"
+          name="avatarForm"
+          novalidate
+        >
+          <input
+            id="avatar-input"
+            class="popup__input popup__input_type_avatar"
+            type="url"
+            name="avatar"
+            placeholder="Ссылка на аватар"
+            required
+          />
+          <span class="popup__input-error avatar-input-error"></span>
+
+          <button
+            class="popup__save-button popup__save-button_disabled"
+            type="submit"
+            disabled
+          >
+            Сохранить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_type_image">
+      <div class="popup__container popup__container_type_image">
+        <button class="popup__close-button" type="button">×</button>
+
+        <img class="popup__image" src="" alt="" />
+        <p class="popup__image-title"></p>
+      </div>
+    </div>
+
+    <div class="popup popup_type_info">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button">×</button>
+
+        <h2 class="popup__title">Информация о карточке</h2>
+
+        <ul class="popup__info-list"></ul>
+
+        <h3 class="popup__subtitle">Лайкнули:</h3>
+
+        <ul class="popup__users-list"></ul>
+      </div>
+    </div>
+
+  </body>
+</html>
