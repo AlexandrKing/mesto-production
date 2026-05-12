@@ -56,8 +56,8 @@
                 required
                 minlength="2"
                 maxlength="40"
-                pattern="^[A-Za-zА-Яа-яЁё\s-]+$"
-                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
+                pattern="^[A-Za-zА-Яа-яЁё \-]+$"
+                data-error-message="Разрешены только латинские и кириллические буквы, дефис и пробел"
               />
               <span class="popup__error" id="user-name-error"></span>
             </label>
@@ -71,6 +71,8 @@
                 required
                 minlength="2"
                 maxlength="200"
+                pattern="^[A-Za-zА-Яа-яЁё \-]+$"
+                data-error-message="Разрешены только латинские и кириллические буквы, дефис и пробел"
               />
               <span class="popup__error" id="user-description-error"></span>
             </label>
@@ -100,8 +102,8 @@
                 required
                 minlength="2"
                 maxlength="30"
-                pattern="^[A-Za-zА-Яа-яЁё\s-]+$"
-                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
+                pattern="^[A-Za-zА-Яа-яЁё \-]+$"
+                data-error-message="Разрешены только латинские и кириллические буквы, дефис и пробел"
               />
               <span class="popup__error" id="place-name-error"></span>
             </label>
